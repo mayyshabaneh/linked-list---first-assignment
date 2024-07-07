@@ -122,12 +122,12 @@ class LinkedList:
             return
         current_node = self.head
         while current_node:
-            runner = current_node
-            while runner.next:
-                if runner.next.value == current_node.value:
-                    runner.next = runner.next.next
+            temp = current_node
+            while temp.next:
+                if temp.next.value == current_node.value:
+                    temp.next = temp.next.next
                 else:
-                    runner = runner.next
+                    temp = temp.next
             current_node = current_node.next
 
 
